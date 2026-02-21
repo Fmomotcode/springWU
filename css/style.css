@@ -104,11 +104,13 @@ p {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 #text:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transform: scale(1.05);
 }
 
 .menu:hover {
@@ -118,27 +120,36 @@ p {
 
 #info {
     background-color: white;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 5px;
+    transition: transform 0.3s ease;
+}
+
+#info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transform: scale(1.05);
 }
 
 ul {
     font-size: 1.1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    gap: 20px;
-    line-height: 1.6;
+    gap: 10px;
+    line-height: 1.5;
     padding: 10px;
 }
 
 button {
-    padding: 8px 20px;
-    border-radius: 25px;
+    padding: 7px 20px;
+    border-radius: 15px;
     font-size: 1.1rem;
     transition: 0.3s;
     margin-left: 33%;
+    margin-bottom: 1%;
 }
 
 button:hover {
@@ -146,4 +157,36 @@ button:hover {
     transform: translateY(4px);
     color: white;
     background-color: #5f1aa0;
+}
+
+.mindre {
+    display: block;
+    max-height: 30%;
+    width: 100%;
+    border-radius: 40px;
+    filter: sepia(0.6);
+    filter: blur(0.5);
+}
+
+.mindre.mer {
+    max-height: 100px;
+}
+
+.preview {
+    max-height: 1px;       
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.preview.expanded {
+    max-height: 500px;      
+}
+
+.read-more {
+    padding: 7px 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    margin-left: 33%;
+    margin-bottom: 1%;
 }
