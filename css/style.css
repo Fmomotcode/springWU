@@ -14,7 +14,7 @@
     "se se as"
     "ft ft ft";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 4fr 4.5fr auto;
+    grid-template-rows: 1fr 3.5fr 4.5fr 2fr;
 }
 
 header {
@@ -37,6 +37,18 @@ main {
     background-size: 100% auto;
     background-position: 10% 20%;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    transition: transform 1s ease;
+}
+
+main:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transform: scale(1.03);
 }
 
 section {
@@ -61,7 +73,16 @@ aside {
 
 footer {
     grid-area: ft;
-    background-color: red;
+    background: linear-gradient(10deg, #431c68, #2c2a29);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 50px;
+    column-gap: 130px;
+    display: grid;
+    grid-template-areas: 
+    "f1 f2 f3 f4";
 }
 
 .menu {
@@ -164,12 +185,12 @@ button:hover {
     max-height: 30%;
     width: 100%;
     border-radius: 40px;
-    filter: sepia(0.6);
-    filter: blur(0.5);
+    filter: sepia(0.6) blur(0.5px);
 }
 
 .mindre.mer {
-    max-height: 100px;
+    max-height: 30%;
+    width: 100%;
 }
 
 .preview {
@@ -189,4 +210,115 @@ button:hover {
     transition: 0.3s;
     margin-left: 33%;
     margin-bottom: 1%;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+}
+
+#undertext {
+    color: white;
+    max-width: 500px;
+}
+
+.extra_bilder {
+    position: absolute;
+    height: 30%;
+    width: auto;
+    right: 40px;
+    bottom: 40px;
+    height: 120px;
+    width: auto;
+    border-radius: 50px;
+    border: 10px solid white;
+    filter: sepia(0.8);
+}
+
+.bilder {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    right: 230px;
+    bottom: 180px;
+    height: 120px;
+    width: auto;
+    border-radius: 50px;
+    border: 10px solid white;
+    filter: sepia(0.8);
+}
+
+.bilder2 {
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    right: 10px;
+    bottom: 310px;
+    height: 120px;
+    width: auto;
+    border-radius: 50px;
+    border: 10px solid white;
+    filter: sepia(0.6);
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+#f1 {
+    grid-area: f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+#f2 {
+    grid-area: f2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#f3 {
+    grid-area: f3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#f4 {
+    grid-area: f4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ft_text {
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    line-height: 1;
+    align-items: center;
+}
+
+.ft_text:hover {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    color: white;
+    background-color: #5f1aa0;
+    border-radius: 15px;
+}
+
+.ikon {
+    height: 100%;
+    width: 20%;
+    border-radius: 20px;
+    padding: 5px;
 }
