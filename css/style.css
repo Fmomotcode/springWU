@@ -1,3 +1,8 @@
+:root {
+    --background_c: linear-gradient(#32312f, #4b137d);
+    --border_line: 16px
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,12 +24,15 @@
 
 header {
     grid-area: hd;
-    background-image: linear-gradient(#32312f, #4b137d);
+    background-image: var(--background_c);
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
 nav {
     grid-area: nav;
-    background-image: linear-gradient(#32312f, #4b137d);
+    background-image: var(--background_c);
     display: flex;
     align-items: center;
     column-gap: 120px;
@@ -89,15 +97,13 @@ footer {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     font-size: 1.3rem;
-    display: block;
-    background-color: white;
-    border-radius: 15px;
-    padding: 1%;
-    padding-left: 2%;
-    padding-right: 2%;
-    color: black;
-    margin-right: 3%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff20, #ffffff05);
+    backdrop-filter: blur(10px);
+    border: 3px rgba(255,255,255,0.3) solid;
+    transition: all 0.3s ease;
 }
 
 h3 {
@@ -106,7 +112,7 @@ h3 {
     font-size: 1.5rem;
     padding: 2%;
     background-color: white;
-    border-radius: 15px;
+    border-radius: var(--border_line);
     margin-top: 10px;
 }
 
@@ -121,7 +127,7 @@ p {
 #text {
     background: white;
     padding: 20px;
-    border-radius: 16px;
+    border-radius: var(--border_line);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -137,12 +143,13 @@ p {
 .menu:hover {
     box-shadow: 0 12px 30px rgba(0,0,0,0.3);
     transform: translateY(4px);
+    background: #5f1aa0;
 }
 
 #info {
     background-color: white;
     padding: 20px 20px 0 20px;
-    border-radius: 16px;
+    border-radius: var(--border_line);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -321,4 +328,12 @@ h4 {
     width: 20%;
     border-radius: 20px;
     padding: 5px;
+}
+
+#logga {
+    height: 130px;
+    width: 270px;
+    border-radius: 30px;
+    filter: grayscale(0.6);
+    border: 5px white solid;
 }
