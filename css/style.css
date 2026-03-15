@@ -1,12 +1,17 @@
 :root {
     --background_c: linear-gradient(#32312f, #4b137d);
-    --border_line: 16px
+    --border_line: 16px;
+    --border_thing: 7px black solid;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 #wrapper {
@@ -336,4 +341,148 @@ h4 {
     border-radius: 30px;
     filter: grayscale(0.6);
     border: 5px white solid;
+}
+
+
+
+
+/*SIDA TVÅ*/
+#container {
+    min-height: 150vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    "hd nav nav"
+    "ma ma ma"
+    "ca ca ca"
+    "se1 se1 se1";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3.5fr 4.5fr 500px;
+}
+
+#cards {
+    border-radius: 25px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+#ar {
+    grid-area: ar;
+    border-radius: 25px;
+    background: var(--background_c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+    
+}
+
+#ar1 {
+    grid-area: ar1;
+    background: var(--background_c);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+}
+
+#ar2 {
+    grid-area: ar2;
+    background: var(--background_c);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+}
+
+#ar3 {
+    grid-area: ar3;
+    background: var(--background_c);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+}
+
+#ar4 {
+    grid-area: ar4;
+    background: var(--background_c);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+}
+
+#ar5 {
+    grid-area: ar5;
+    background: var(--background_c);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: var(--border_thing);
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    z-index: 0;
+    border: 10px black solid;
+    border-radius: 15px;
+}
+
+.cards_bild {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(0.9) contrast(1.1);
+    transition: transform 0.4s ease;
+}
+
+#new_games {
+    grid-area: se1;
+    background: linear-gradient(10deg, #431c68, #2c2a29);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+#kontakt-form {
+    background: rgba(255,255,255,0.07);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+#kontakt-form input,
+#kontakt-form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+#kontakt-form textarea {
+    resize: vertical;
+    min-height: 100px;
 }

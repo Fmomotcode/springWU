@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <title>VR-startsida</title>
+  <title><VR-spelsida></VR-spelsida></title>
 </head>
 
 <body>
-  <div id="wrapper">
+  <div id="container">
     <header>
       <img id="logga" src="img/Logga_slutprojekt.jpg" alt="logga">
     </header>
@@ -19,3 +19,41 @@
       <a class="menu" href="boka.html">Bokning</a>
       <a class="menu" href="kontakt.html">Kontakt</a>
     </nav>
+    <main id="main2">
+      <video class="bg-video" src="img/Skärminspelning 2026-03-13 112836.mp4" autoplay muted loop></video>
+    </main>
+    <div id="cards">
+    <article id="ar1">
+      <img class="cards_bild" src="img/spel2.jpg" alt="spel2">
+    </article>
+    <article id="ar">
+      <img class="cards_bild" src="img/spel1.jpg" alt="spel1">
+    </article>
+    <article id="ar2">
+      <img class="cards_bild" src="img/spel3.avif" alt="spel3">
+    </article>
+    <article id="ar3">
+      <img class="cards_bild" src="img/spel4.jpg" alt="spel4">
+    </article>
+    <article id="ar4">
+      <img class="cards_bild" src="img/spel5.jpg" alt="spel5">
+    </article>
+    <article id="ar5">
+      <img class="cards_bild" src="img/spel6.webp" alt="spel6">
+    </article>
+    </div>
+    <section id="new_games">
+      <h3>Ge förslag på spel!</h3>
+      <form id="kontakt-form">
+        <label for="namn">Namn:</label>
+        <input type="text" id="namn" name="namn" placeholder="Ditt namn" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Din email" required>
+    
+        <label for="spel">Ditt spelförslag:</label>
+        <textarea id="meddelande" name="meddelande" placeholder="Skriv ditt förslag..." required></textarea>
+    
+        <button type="submit">Skicka</button>
+      </form>
+    </section>
