@@ -335,6 +335,14 @@ h4 {
     padding: 5px;
 }
 
+#btnOpen {
+    display: none;
+}
+
+#btnClose {
+    display: none;
+}
+
 #logga {
     height: 130px;
     width: 270px;
@@ -343,12 +351,82 @@ h4 {
     border: 5px white solid;
 }
 
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    align-items: center;
+}
+
+
+/* mobile sida 1 */
+@media screen and (max-width:450px) {
+    #wrapper {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-areas: 
+        "nav hd"
+        "ma ma"
+        "se se"
+        "ft ft";
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-rows: 1fr 2.5fr 2fr 1fr;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        inset: 0;
+        padding: 1;
+    }
+    #btnOpen {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        margin: auto;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(#32312f, #4b137d);
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 999;
+    }
+
+    #nav-links.open {
+        display: flex;
+    }
+
+    #btnClose {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        margin: 0;
+    }
+}
 
 
 
 /*SIDA TVÅ*/
 #container {
-    min-height: 150vh;
+    max-height: 190vh;
     width: 100%;
     display: grid;
     grid-template-areas: 
@@ -357,132 +435,206 @@ h4 {
     "ca ca ca"
     "se1 se1 se1";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3.5fr 4.5fr 500px;
+    grid-template-rows: 150px 500px 3.5fr 550px;
 }
 
-#cards {
+#cards article {
     border-radius: 25px;
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 4px solid rgba(255,255,255,0.2);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     transition: all 0.35s ease;
     overflow: hidden;
+    position: relative;
 }
 
-#ar {
-    grid-area: ar;
-    border-radius: 25px;
-    background: var(--background_c);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border_thing);
-    
+#cards {
+    grid-area: ca;
+    display: grid;
+    width: 100%;
+    grid-template-areas: 
+    "ru ru ru"
+    "ar ar1 ar2"
+    "ar3 ar4 ar5";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 2fr;
+    gap: 25px;
+    padding: 40px;
+    background: linear-gradient(180deg,#1b1b1b,#4b137d);
 }
 
-#ar1 {
-    grid-area: ar1;
-    background: var(--background_c);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border_thing);
+#cards article:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.8);
+    border: 4px solid rgba(74, 7, 97, 0.322);
+    position: relative;
 }
 
-#ar2 {
-    grid-area: ar2;
-    background: var(--background_c);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border_thing);
+#ar { 
+    grid-area: ar; 
 }
 
-#ar3 {
-    grid-area: ar3;
-    background: var(--background_c);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border_thing);
+#ar1 { 
+    grid-area: ar1; 
 }
 
-#ar4 {
-    grid-area: ar4;
-    background: var(--background_c);
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border_thing);
+#ar2 { 
+    grid-area: ar2; 
 }
 
-#ar5 {
-    grid-area: ar5;
-    background: var(--background_c);
-    border-radius: 25px;
+#ar3 { 
+    grid-area: ar3; 
+}
+
+#ar4 { 
+    grid-area: ar4; 
+}
+#ar5 { 
+    grid-area: ar5; 
+}
+
+#title {
+    grid-area: ru;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    border: var(--border_thing);
 }
 
 video {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  
-    z-index: 0;
-    border: 10px black solid;
-    border-radius: 15px;
-}
-
-.cards_bild {
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 0;
+}
+
+.cards_bild {
+    width: auto;
+    height: 250px;
     border-radius: 20px;
-    filter: brightness(0.9) contrast(1.1);
+    filter: brightness(0.9) contrast(1.1) sepia(0.5);
     transition: transform 0.4s ease;
+    position: relative;
 }
 
 #new_games {
     grid-area: se1;
     background: linear-gradient(10deg, #431c68, #2c2a29);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 40px;
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+    "im for";
+    gap: 20px;
+}
+
+#forms {
+    grid-area: for;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#improvemt {
+    grid-area: im;
 }
 
 #kontakt-form {
-    background: rgba(255,255,255,0.07);
+    width: 420px;
+    background: rgba(255,255,255,0.08);
     padding: 30px;
     border-radius: 20px;
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(160, 97, 97);
 }
 
 #kontakt-form input,
 #kontakt-form textarea {
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1rem;
+    padding: 12px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    background: rgba(255,255,255,0.9);
+    transition: 0.25s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #kontakt-form textarea {
     resize: vertical;
     min-height: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#kontakt-form input:focus,
+#kontakt-form textarea:focus {
+    outline: none;
+    border: 2px solid #7a2cff;
+    transform: scale(1.02);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, #32312f 0%, rgba(0,0,0,0) 40%);
+    z-index: 1;
+}
+
+.card_overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: 0.35s;
+    z-index: 2;
+}
+
+#cards article:hover .cards_bild {
+    filter: blur(4px) brightness(0.6);
+    opacity: 1;
+}
+
+#cards article:hover .card_overlay {
+    opacity: 1;
+}
+
+.card_overlay h3 {
+    color: white;
+    background: none;
+    font-size: 1.2rem;
+}
+
+.info_btn {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff20, #ffffff05);
+    backdrop-filter: blur(10px);
+    border: 3px rgba(255,255,255,0.3) solid;
+    transition: 1s ease;
+}
+
+.info_btn:hover {
+    background: linear-gradient(135deg, #32312f, #431c68);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    transform: translateY(4px);
 }
