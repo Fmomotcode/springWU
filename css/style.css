@@ -360,33 +360,40 @@ h4 {
 
 
 /* mobile sida 1 */
-@media screen and (max-width:450px) {
+@media screen and (max-width: 450px) {
     #wrapper {
-        height: 100vh;
         width: 100vw;
-        display: grid;
+        min-height: 100vh;
+        height: auto;
         grid-template-areas: 
         "nav hd"
         "ma ma"
         "se se"
         "ft ft";
-        grid-template-columns: 0.5fr 1fr;
-        grid-template-rows: 1fr 2.5fr 2fr 1fr;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 80px 350px auto auto;
     }
+
+    header {
+        padding: 10px 15px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #logga {
+        width: 110px;
+        height: 55px;
+        border-width: 3px;
+    }
+
     nav {
         display: flex;
-        flex-direction: column;
-        inset: 0;
-        padding: 1;
-    }
-    #btnOpen {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        margin: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 15px;
+        column-gap: 0;
+        background-image: var(--background_c);
     }
 
     #nav-links {
@@ -400,12 +407,23 @@ h4 {
         background: linear-gradient(#32312f, #4b137d);
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
         z-index: 999;
     }
 
     #nav-links.open {
         display: flex;
+    }
+
+    #btnOpen {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2.2rem;
+        cursor: pointer;
+        margin: 0;
+        padding: 10px;
     }
 
     #btnClose {
@@ -420,8 +438,96 @@ h4 {
         right: 20px;
         margin: 0;
     }
-}
 
+    main {
+        padding: 25px;
+        min-height: 350px;
+        background-size: cover;
+        background-position: center center;
+        justify-content: flex-end;
+    }
+
+    main::before {
+        background: linear-gradient(to top, #32312f 0%, rgba(0,0,0,0) 60%);
+    }
+
+    main:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+    }
+
+    #undertext {
+        font-size: 0.85rem;
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+
+    .bilder, .bilder2, .extra_bilder {
+        display: none;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    #text {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    #text:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer {
+        grid-template-areas: 
+        "f1"
+        "f2"
+        "f3"
+        "f4";
+        grid-template-columns: 1fr;
+        padding: 25px 20px;
+        gap: 30px;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .ikon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .ft_text {
+        font-size: 1rem;
+        gap: 8px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #f1 {
+        gap: 15px;
+        align-items: center;
+    }
+
+    #f1 #logga {
+        width: 140px;
+        height: 65px;
+    }
+}
 
 
 /*SIDA TVÅ*/
