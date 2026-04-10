@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>VR-startsida</title>
+</head>
+
+<body>
+    <div id="wrapper_bokning">
+        <header>
+            <img id="logga" src="img/Logga_slutprojekt.jpg" alt="logga">
+        </header>
+        <nav>
+            <button id="btnOpen">☰</button>
+            <div id="nav-links">
+                <button id="btnClose">✕</button>
+                <a class="menu" href="index.html">Hem</a>
+                <a class="menu" href="spel.html">Spel</a>
+                <a class="menu" href="boka.html">Bokning</a>
+                <a class="menu" href="kontakt.html">Kontakt</a>
+            </div>
+        </nav>
+        <main id="main_kalender">
+            <h2>Vanliga frågor och kontakt information</h2>
+            <p id="undertext">Har du frågor eller behöver hjälp? På vår kontaktsida hittar du svar på vanliga frågor
+                samt all information du behöver för att komma i kontakt med oss. Tveka inte att höra av dig – vi finns
+                här för att hjälpa dig!</p>
+        </main>
+        <section id="kalender">
+            <div id="kalender-container">
+                <div id="kalender-header">
+                    <button class="arrow" id="prevMonth">←</button>
+                    <h3 id="kalender-month">April 2026</h3>
+                    <button class="arrow" id="nextMonth">→</button>
+                </div>
+                <div id="kalender-dagar">
+                    <span class="dag-namn">Mån</span>
+                    <span class="dag-namn">Tis</span>
+                    <span class="dag-namn">Ons</span>
+                    <span class="dag-namn">Tor</span>
+                    <span class="dag-namn">Fre</span>
+                    <span class="dag-namn">Lör</span>
+                    <span class="dag-namn">Sön</span>
+                </div>
+                <div id="kalender-grid">
+                    <div class="dag">1</div>
+                    <div class="dag">2</div>
+                    <div class="dag">3</div>
+                    <div class="dag ledig">4</div>
+                    <div class="dag ledig">5</div>
+                    <div class="dag">6</div>
+                    <div class="dag">7</div>
+                    <div class="dag">8</div>
+                    <div class="dag ledig">9</div>
+                    <div class="dag ledig">10</div>
+                    <div class="dag vald">11</div>
+                    <div class="dag">12</div>
+                    <div class="dag">13</div>
+                    <div class="dag ledig">14</div>
+                    <div class="dag ledig">15</div>
+                    <div class="dag">16</div>
+                    <div class="dag">17</div>
+                    <div class="dag">18</div>
+                    <div class="dag ledig">19</div>
+                    <div class="dag ledig">20</div>
+                    <div class="dag">21</div>
+                    <div class="dag">22</div>
+                    <div class="dag">23</div>
+                    <div class="dag ledig">24</div>
+                    <div class="dag ledig">25</div>
+                    <div class="dag">26</div>
+                    <div class="dag">27</div>
+                    <div class="dag">28</div>
+                    <div class="dag ledig">29</div>
+                    <div class="dag ledig">30</div>
+                </div>
+                <div id="kalender-legend">
+                    <span class="legend-item"><span class="legend-dot ledig-dot"></span>Stängt</span>
+                    <span class="legend-item"><span class="legend-dot vald-dot"></span>Valt datum</span>
+                    <span class="legend-item"><span class="legend-dot oppet-dot"></span>Öppet</span>
+                </div>
+            </div>
+        </section>
+        <aside id="check_out">
+            <div id="bokning-info">
+        <h4>Din bokning</h4>
+        <div class="bokning-valt">
+            <span class="bokning-label">📅 Valt datum:</span>
+            <span class="bokning-value" id="valt-datum">Inget datum valt</span>
+        </div>
+        <div class="bokning-divider"></div>
+        <p class="bokning-instruktion">Fyll i dina uppgifter nedan för att slutföra bokningen.</p>
+        <form id="bokning-form">
+            <label class="bokning-label" for="namn">Ditt namn:</label>
+            <input type="text" id="namn" name="namn" placeholder="Ditt namn" required>
+
+            <label class="bokning-label" for="email">Ditt email:</label>
+            <input type="email" id="email" name="email" placeholder="Din email" required>
+
+            <label class="bokning-label" for="klass">Din klass:</label>
+            <input type="text" id="klass" name="klass" placeholder="T.ex. TE23A" required>
+
+            <button type="submit" id="boka-btn">Skicka bokning →</button>
+        </form>
+    </div>
+        </aside>
+        <footer>
+            <div id="f1">
+                <img id="logga" src="img/Logga_slutprojekt.jpg" alt="logga">
+                <h4>Välkommen till framtiden</h4>
+            </div>
+            <div id="f2">
+                <h4>Sociala medier</h4>
+                <a class="ft_text" href="https://www.instagram.com/ntijohanneberg/"><img class="ikon"
+                        src="img/alexander-shatov-71Qk8ODIBko-unsplash.jpg" alt="insta">@ntijohanneberg</a>
+                <a class="ft_text" href="https://www.youtube.com/channel/UCf7DmB9NKTJ86MOn4sPON3w"><img class="ikon"
+                        src="img/alexander-shatov-I4p0FcjDBJI-unsplash.jpg" alt="youtube">@nti_gymnasiet</a>
+                <a class="ft_text" href="https://www.tiktok.com/@nti_gymnasiet"><img class="ikon"
+                        src="img/alexander-shatov-niUkImZcSP8-unsplash.jpg" alt="tiktok">@nti_gymnasiet</a>
+            </div>
+            <div id="f3">
+                <h4>Adress</h4>
+                <a class="ft_text"
+                    href="https://www.google.com/maps?sca_esv=57d8031efe13a3fc&rlz=1C1GCEA_enSE1124SE1124&lsig=AB86z5VBpsnC34sSnODE3oDFwEGX&biw=1707&bih=735&dpr=1.13&um=1&ie=UTF-8&fb=1&gl=se&sa=X&geocode=KTHA5rAM809GMamSQcuj4RIF&daddr=Origov%C3%A4gen+4,+412+58+G%C3%B6teborg">Origovägen
+                    4</a>
+                <a class="ft_text" href="https://www.vasttrafik.se/reseplanering/hallplatser/9021014001960000/">Närmaste
+                    hållplats: <br> Chalmers</a>
+            </div>
+            <div id="f4">
+                <h4>Mer information</h4>
+                <a class="ft_text" href="https://ntigymnasiet.se/johanneberg/">Skolans hemsida: <br>NTI Johanneberg</a>
+            </div>
+        </footer>

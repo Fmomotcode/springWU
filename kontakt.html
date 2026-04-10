@@ -23,7 +23,7 @@
                 <a class="menu" href="kontakt.html">Kontakt</a>
             </div>
         </nav>
-        <main>
+        <main id="main_kontakt">
             <h2>Vanliga frågor och kontakt information</h2>
             <p id="undertext">Har du frågor eller behöver hjälp? På vår kontaktsida hittar du svar på vanliga frågor
                 samt all information du behöver för att komma i kontakt med oss. Tveka inte att höra av dig – vi finns
@@ -37,29 +37,60 @@
                 Du är också varmt välkommen att gå med i vår Discord-server, där vi delar information i realtid och där
                 du enkelt kan hålla dig uppdaterad samt kommunicera med andra. Du ansluter genom att skanna QR-koden
                 eller genom att klicka på länken.</p>
-            <img src="" alt="bild med qr kod samt länk">
+            <img id="info_img" src="img/unnamed.png" alt="bild med qr kod samt länk">
         </section>
         <aside id="questions">
             <h2>Vanliga frågor</h2>
             <div id="q1">
                 <h4 class="version2">Hur bokar man in sig?</h4>
+                <img class="pil_ner" src="img/arrow-down-icon.webp" alt="pil_ner">
             </div>
             <div id="q2">
                 <h4 class="version2">Vad för spel kan man spela?</h4>
+                <img class="pil_ner" src="img/arrow-down-icon.webp" alt="pil_ner">
             </div>
             <div id="q3">
                 <h4 class="version2">Hur ofta är VR-rummet öppen?</h4>
+                <img class="pil_ner" src="img/arrow-down-icon.webp" alt="pil_ner">
             </div>
             <div id="q4">
                 <h4 class="version2">Hur många får vara med och spela under ett pass?</h4>
+                <img class="pil_ner" src="img/arrow-down-icon.webp" alt="pil_ner">
             </div>
             <div id="q5">
                 <h4 class="version2">Vem ska man kontakta för fler frågor?</h4>
+                <img class="pil_ner" src="img/arrow-down-icon.webp" alt="pil_ner">
             </div>
 
         </aside>
-        <article>
-
+        <article id="kontakt_personer">
+            <button class="arrow prev">←</button>
+            <div class="slider-window">
+                <div class="slider-track">
+                    <div class="info-och-bilder">
+                        <img class="workers" src="img/contact_person.avif" alt="">
+                        <div class="cards_overlay">
+                        <p class="worker_name">Melvin Nilsson</p>
+                        <p class="worker_role">Inköpsansvarig</p>
+                        </div>
+                    </div>
+                    <div class="info-och-bilder">
+                        <img class="workers" src="img/worker 2.avif" alt="">
+                        <div class="cards_overlay">
+                        <p class="worker_name">Anna Andersson</p>
+                        <p class="worker_role">Huvudansvarig</p>
+                        </div>
+                    </div>
+                    <div class="info-och-bilder">
+                        <img class="workers" src="img/arbetare.avif" alt="">
+                        <div class="cards_overlay">
+                        <p class="worker_name">Erik Österbrand</p>
+                        <p class="worker_role">Tekniker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="arrow next">→</button>
         </article>
         <footer>
             <div id="f1">
@@ -88,3 +119,8 @@
                 <a class="ft_text" href="https://ntigymnasiet.se/johanneberg/">Skolans hemsida: <br>NTI Johanneberg</a>
             </div>
         </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
