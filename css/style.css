@@ -1,7 +1,52 @@
 :root {
     --background_c: linear-gradient(#32312f, #4b137d);
     --border_line: 16px;
+
     --border_thing: 7px black solid;
+    --primary: #5f1aa0;
+
+    --secondary: #2c2a29;
+    --accent: #7a2cff;
+
+    --radius-md: 20px;
+    --radius-lg: 30px;
+
+    --shadow: 0 10px 25px rgba(0,0,0,0.3);
+    --shadow-hover: 0 20px 45px rgba(0,0,0,0.5);
+
+    --padding: 20px;
+    --gap: 20px;
+
+    --gradient-main: linear-gradient(135deg, #5f1aa0, #2c2a29);
+    --gradient-reverse: linear-gradient(135deg, #2c2a29, #5f1aa0);
+
+    --space-sm: 10px;
+    --space-md: 20px;
+    --space-lg: 40px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+p, ul, input, textarea, button {
+    font-family: 'Gill Sans', sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 * {
@@ -66,12 +111,12 @@ main:hover {
 
 section {
     grid-area: se;
-    background: linear-gradient(135deg, #5f1aa0, #2c2a29);
+    background: var(--gradient-main);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px;
-    gap: 20px;
+    padding: var(--space-lg);
+    gap: var(--space-md);
 }
 
 aside {
@@ -80,8 +125,8 @@ aside {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 40px;
-    gap: 20px;
+    padding: var(--space-lg);
+    gap: var(--space-md);
 }
 
 footer {
@@ -91,11 +136,30 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 50px;
+    padding: var(--space-lg);
     column-gap: 130px;
     display: grid;
     grid-template-areas: 
     "f1 f2 f3 f4";
+}
+
+button {
+    padding: 10px 22px;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-family: 'Gill Sans', sans-serif;
+    transition: 0.3s ease;
+}
+
+.info_btn {
+    background: var(--primary);
+    color: white;
+}
+
+.info_btn:hover {
+    background: #7a2cff;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
 }
 
 .menu {
@@ -104,7 +168,7 @@ footer {
     font-size: 1.3rem;
     color: white;
     padding: 10px 22px;
-    border-radius: 20px;
+    border-radius: var(--radius-md);
     background: linear-gradient(135deg, #ffffff20, #ffffff05);
     backdrop-filter: blur(10px);
     border: 3px rgba(255,255,255,0.3) solid;
@@ -112,31 +176,32 @@ footer {
 }
 
 h3 {
-    color: black;
+    color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
     padding: 2%;
-    background-color: white;
     border-radius: var(--border_line);
     margin-top: 10px;
 }
 
 p {
-    color: black;
+    color: white;
     border-radius: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.6;
-    font-size: 1rem;
 }
 
 #text {
-    background: white;
-    padding: 20px;
-    border-radius: var(--border_line);
+    background: linear-gradient(65deg, #9e796d, #663198);
+    padding: var(--padding);
+    border-radius: var(--radius-lg);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    color: white;
 }
 
 #text:hover {
@@ -152,9 +217,9 @@ p {
 }
 
 #info {
-    background-color: white;
+    background: linear-gradient(65deg, #a38277, #663198);
     padding: 20px 20px 0 20px;
-    border-radius: var(--border_line);
+    border-radius: var(--radius-lg);
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     max-width: 600px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -169,11 +234,12 @@ p {
 }
 
 ul {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     gap: 10px;
     line-height: 1.5;
     padding: 10px;
+    font-weight: 1rem;
 }
 
 button {
@@ -228,7 +294,6 @@ h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     margin-bottom: 20px;
-    font-size: 3.5rem;
 }
 
 #undertext {
@@ -276,7 +341,6 @@ h2 {
 }
 
 h4 {
-    font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
@@ -545,7 +609,7 @@ h4 {
 }
 
 #cards article {
-    border-radius: 25px;
+    border-radius: var(--radius-md);
     background: rgba(255,255,255,0.05);
     backdrop-filter: blur(10px);
     display: flex;
@@ -568,8 +632,8 @@ h4 {
     "ar3 ar4 ar5";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 2fr 2fr;
-    gap: 25px;
-    padding: 40px;
+    gap: var(--space-md);
+    padding: var(--space-lg);
     background: linear-gradient(180deg,#1b1b1b,#4b137d);
 }
 
@@ -637,7 +701,7 @@ video {
     display: grid;
     grid-template-areas: 
     "im for";
-    gap: 20px;
+    gap: 50px;
 }
 
 #forms {
@@ -649,6 +713,7 @@ video {
 
 #improvemt {
     grid-area: im;
+    height: 220px;
 }
 
 #kontakt-form {
@@ -689,6 +754,10 @@ video {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#center {
+    align-items: center;
+}
+
 main::before {
     content: "";
     position: absolute;
@@ -701,6 +770,7 @@ main::before {
     position: absolute;
     inset: 0;
     display: flex;
+    border-radius: 45px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -708,7 +778,7 @@ main::before {
     background: rgba(0,0,0,0.6);
     opacity: 0;
     transition: 0.35s;
-    z-index: 2;
+    z-index: 3;
 }
 
 #cards article:hover .cards_bild {
@@ -723,7 +793,6 @@ main::before {
 .card_overlay h3 {
     color: white;
     background: none;
-    font-size: 1.2rem;
 }
 
 .info_btn {
@@ -771,7 +840,6 @@ main::before {
 }
 
 #questions h2 {
-    font-size: 2rem;
     margin-bottom: 10px;
 }
 
@@ -819,12 +887,17 @@ main::before {
     color: rgba(255,255,255,0.85);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     line-height: 1.7;
-    font-size: 1rem;
+}
+
+#img_row {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
 }
 
 #info_img {
     width: 150px;
-    height: 150px;
+    height: auto;
     border-radius: 50px;
     border: 4px solid rgba(255,255,255,0.3);
     align-self: flex-start;
@@ -854,7 +927,6 @@ main::before {
     flex-shrink: 0;
     width: 280px;
     position: relative;
-    overflow: hidden;
     border-radius: 45px;
 }
 
@@ -867,15 +939,6 @@ main::before {
     transition: transform 0.3s ease, filter 0.3s ease;
     transition: 0.35s;
     z-index: 2;
-}
-
-.workers:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.8);
-    border: 4px solid rgba(74, 7, 97, 0.322);
-    position: relative;
-    filter: grayscale(0) sepia(0);
-    opacity: 1;
 }
 
 .workers:hover {
@@ -898,7 +961,6 @@ main::before {
 .arrow {
     background: rgba(255,255,255,0.1);
     border: none;
-    font-size: 2rem;
     color: white;
     cursor: pointer;
     padding: 10px 15px;
@@ -906,11 +968,14 @@ main::before {
     transition: 0.3s;
     margin-left: 0;
     margin-bottom: 0;
+    width: auto;
+    height: 50px;
 }
 
 .slider-window {
-    overflow: hidden;
     width: 840px;
+    overflow: hidden;
+    padding: var(--padding);
 }
 
 .slider-track {
@@ -925,26 +990,63 @@ main::before {
     transform: scale(1.1);
 }
 
-.info-och-bilder .card_overlay {
+.info-och-bilder .cards_overlay {
     border-radius: 45px;
+    opacity: 0;
 }
 
 .info-och-bilder:hover .workers {
     filter: blur(3px) brightness(0.6);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.8);
 }
 
-.info-och-bilder:hover .card_overlay {
+.cards_overlay p {
+    color: white;
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.info-och-bilder:hover .cards_overlay {
     opacity: 1;
 }
 
-.card_overlay .worker_name {
+.cards_overlay .worker_name {
     color: white;
     font-size: 1.1rem;
 }
 
-.card_overlay .worker_role {
+.cards_overlay .worker_role {
     color: rgba(255,255,255,0.7);
     font-size: 0.9rem;
+}
+
+.cards_overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    opacity: 0;
+    transition: 0.35s;
+    z-index: 2;
+}
+
+.popup {
+    display: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.popup_show {
+    display: block;
+}
+
+#under {
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px
 }
 
 #wrapper_bokning {
@@ -957,12 +1059,12 @@ main::before {
     "se2 se2 as"
     "ft ft ft";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2.5fr 3.5fr 300px;
+    grid-template-rows: 1fr 2.4fr 3.5fr 300px;
     background: linear-gradient(65deg, #2c2a29, #5f1aa0);
 }
 
 #main_kalender {
-    background-image: url(../img/boliviainteligente-M9HVnpBpAgM-unsplash.jpg);
+    background-image: url(../img/boliviainteligente-MN4XSpNiP20-unsplash.jpg);
     background-position: center;
 }
 
@@ -1178,7 +1280,7 @@ main::before {
 }
 
 #boka-btn {
-    background: #5f1aa0;
+    background: #9352d0;
     color: white;
     border: 2px rgba(255,255,255,0.25) solid;
     border-radius: 15px;
@@ -1202,3 +1304,4 @@ main::before {
     margin-left: auto;
     filter: hue-rotate(260deg) saturate(0.8) blur(0.3px);
 }
+
